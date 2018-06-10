@@ -1,0 +1,3 @@
+rootProject.name = 'TechLunchApp'
+
+include ':app'
