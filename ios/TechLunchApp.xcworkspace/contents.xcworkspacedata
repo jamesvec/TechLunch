@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/jdonnelly/Working/James-TechLunch/ios/Gareloma.png">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jdonnelly/Working/James-TechLunch/ios/Gareloma@2x.png">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jdonnelly/Working/James-TechLunch/ios/Gareloma@3x.png">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/jdonnelly/Working/James-TechLunch/ios/Gareloma.svg">
+   </FileRef>
+   <FileRef
       location = "group:TechLunchApp.xcodeproj">
    </FileRef>
    <FileRef

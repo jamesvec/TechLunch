@@ -6,6 +6,7 @@ import SecretScreen from "../Containers/SecretScreen";
 import styles from "./Styles/NavigationStyles";
 import { Metrics } from "../Themes";
 import { getStatusBarHeight } from "react-native-status-bar-height";
+import { Colors } from "../Themes";
 
 const STATUS_HEIGHT = getStatusBarHeight();
 
@@ -29,12 +30,10 @@ const PrimaryNav = createMaterialTopTabNavigator(
       style: {
         height: Metrics.navBarHeight + STATUS_HEIGHT,
         justifyContent: "center",
-        paddingTop: STATUS_HEIGHT
+        paddingTop: STATUS_HEIGHT,
+        backgroundColor: Colors.bloodOrange
       }
     }
-    // navigationOptions: {
-    //   headerStyle: styles.header
-    // }
   }
 );
 
