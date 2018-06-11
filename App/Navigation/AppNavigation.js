@@ -2,6 +2,7 @@ import { createMaterialTopTabNavigator } from "react-navigation";
 import LaunchScreen from "../Containers/LaunchScreen";
 import GraphScreen from "../Containers/GraphScreen";
 import StackScreen from "../Containers/StackScreen";
+import SecretScreen from "../Containers/SecretScreen";
 import styles from "./Styles/NavigationStyles";
 import { Metrics } from "../Themes";
 import { getStatusBarHeight } from "react-native-status-bar-height";
@@ -12,7 +13,8 @@ const PrimaryNav = createMaterialTopTabNavigator(
   {
     LaunchScreen: { screen: LaunchScreen },
     GraphScreen: { screen: GraphScreen },
-    StackScreen: { screen: StackScreen }
+    StackScreen: { screen: StackScreen },
+    SecretScreen: { screen: SecretScreen }
   },
   {
     // Default config for all screens
