@@ -22,5 +22,10 @@ export default StyleSheet.create({
     fontSize: 30,
     color: Colors.bloodOrange,
     fontWeight: "bold"
+  },
+  frown: {
+    fontSize: 30,
+    color: Colors.bloodOrange,
+    fontWeight: "bold"
   }
 });

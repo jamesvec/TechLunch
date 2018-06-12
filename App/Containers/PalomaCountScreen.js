@@ -9,6 +9,8 @@ import Icon from "react-native-vector-icons/FontAwesome";
 // Styles
 import styles from "./Styles/PalomaCountScreenStyle";
 
+const DRUNK_COUNT = 4;
+
 class PalomaCountScreen extends Component {
   static navigationOptions = {
     tabBarIcon: () => <Icon name="glass" size={20} color="#FFF" />
@@ -22,7 +24,7 @@ class PalomaCountScreen extends Component {
           <View style={styles.textContainer}>
             <Animatable.Text
               duration={15000}
-              animation={this.props.palomas > 4 ? "swing" : null}
+              animation={this.props.palomas > DRUNK_COUNT ? "swing" : null}
               easing="ease-out"
               iterationCount="infinite"
               style={styles.topText}
@@ -32,7 +34,7 @@ class PalomaCountScreen extends Component {
             <Animatable.Text
               style={styles.count}
               duration={13000}
-              animation={this.props.palomas > 4 ? "swing" : null}
+              animation={this.props.palomas > DRUNK_COUNT ? "swing" : null}
               easing="ease-out"
               iterationCount="infinite"
             >
@@ -41,7 +43,7 @@ class PalomaCountScreen extends Component {
             <Animatable.Text
               style={styles.bottomText}
               duration={13000}
-              animation={this.props.palomas > 4 ? "swing" : null}
+              animation={this.props.palomas > DRUNK_COUNT ? "swing" : null}
               easing="ease-out"
               iterationCount="infinite"
             >
