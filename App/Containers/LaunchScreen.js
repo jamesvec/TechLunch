@@ -18,7 +18,7 @@ export default class LaunchScreen extends Component {
           <View style={styles.section}>
             <Image style={styles.logo} source={Images.logo} />
             <Text style={styles.ingredients}>
-              Grapefruit.{"\n"}Lime.{"\n"}Sugar.{"\n"}Taquilla.{"\n"}Soda.{"\n"}Gary.
+              Grapefruit.{"\n"}Lime.{"\n"}Tequila.{"\n"}Soda.{"\n"}Gary.
             </Text>
           </View>
         </ScrollView>

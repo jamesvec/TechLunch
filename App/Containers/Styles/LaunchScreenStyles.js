@@ -17,7 +17,8 @@ export default StyleSheet.create({
     textAlign: "center",
     fontSize: 24,
     fontStyle: "italic",
-    marginTop: 24
+    marginTop: 24,
+    lineHeight: 40
   },
   centered: {
     alignItems: "center"

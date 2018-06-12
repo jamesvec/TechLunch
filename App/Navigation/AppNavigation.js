@@ -1,7 +1,7 @@
 import { createMaterialTopTabNavigator } from "react-navigation";
 import LaunchScreen from "../Containers/LaunchScreen";
 import GraphScreen from "../Containers/GraphScreen";
-import StackScreen from "../Containers/StackScreen";
+import PalomaCountScreen from "../Containers/PalomaCountScreen";
 import SecretScreen from "../Containers/SecretScreen";
 import styles from "./Styles/NavigationStyles";
 import { Metrics } from "../Themes";
@@ -14,7 +14,7 @@ const PrimaryNav = createMaterialTopTabNavigator(
   {
     LaunchScreen: { screen: LaunchScreen },
     GraphScreen: { screen: GraphScreen },
-    StackScreen: { screen: StackScreen },
+    PalomaCountScreen: { screen: PalomaCountScreen },
     SecretScreen: { screen: SecretScreen }
   },
   {
@@ -27,6 +27,9 @@ const PrimaryNav = createMaterialTopTabNavigator(
     tabBarOptions: {
       showIcon: true,
       showLabel: false,
+      indicatorStyle: {
+        backgroundColor: Colors.white
+      },
       style: {
         height: Metrics.navBarHeight + STATUS_HEIGHT,
         justifyContent: "center",
