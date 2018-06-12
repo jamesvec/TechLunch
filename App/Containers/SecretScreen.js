@@ -40,9 +40,7 @@ class SecretScreen extends Component {
   }
 
   handleClick = () => {
-    console.log(this.props.addPaloma);
     this.props.addPaloma();
-    //console.log(this.props.palomas);
   };
 
   renderSecret() {
