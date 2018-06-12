@@ -6,17 +6,22 @@
  */
 
 #import "AppDelegate.h"
+#import "ReactNativeConfig.h"
 
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <Firebase.h>
+@import GoogleMaps;
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   NSURL *jsCodeLocation;
+  NSString *mapsAPI = [ReactNativeConfig envFor:@"GOOGLE_MAPS_API_KEY"];
 
+  [GMSServices provideAPIKey:@"mapsAPI"];
   [FIRApp configure];
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
