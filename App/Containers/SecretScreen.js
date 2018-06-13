@@ -58,7 +58,7 @@ class SecretScreen extends Component {
           <TouchableOpacity style={styles.addButton} onPress={this.handleClick}>
             <View style={styles.addButton}>
               <Image style={styles.addButtonImage} source={Images.icon} />
-              <Text style={styles.addButtonText}>OOPS I Palomaed again</Text>
+              <Text style={styles.addButtonText}>OOPS, I Palomaed again</Text>
             </View>
           </TouchableOpacity>
         </View>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ScrollView, Text, Image, View } from "react-native";
 import { Images } from "../Themes";
+import RoundedButton from "../Components/RoundedButton";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 // Styles
@@ -20,6 +21,27 @@ export default class LaunchScreen extends Component {
             <Text style={styles.ingredients}>
               Grapefruit.{"\n"}Lime.{"\n"}Tequila.{"\n"}Soda.{"\n"}Gary.
             </Text>
+          </View>
+          <View style={{ alignItems: "center" }}>
+            <RoundedButton
+              onPress={() => {
+                console.log(this.props);
+                this.props.navigation.navigate({
+                  routeName: "StackScreen1",
+                  key: "StackScreen1",
+                  params: {
+                    title: "Screen 1"
+                  }
+                });
+              }}
+              title="stacks"
+              style={{
+                width: 200,
+                bottom: 10
+              }}
+            >
+              Show me stacks
+            </RoundedButton>
           </View>
         </ScrollView>
       </View>

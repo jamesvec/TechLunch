@@ -9,17 +9,13 @@ import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
 // Styles
 import styles from "./Styles/GraphScreenStyle";
 
-
-
 class GraphScreen extends Component {
   static navigationOptions = {
     tabBarIcon: () => <Icon name="signal" size={20} color="#FFF" />
   };
 
   render() {
-    return (
-      <MapView style={styles.map} />
-    );
+    return <MapView style={styles.map} />;
   }
 }
 

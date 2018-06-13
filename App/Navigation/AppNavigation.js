@@ -1,42 +1,36 @@
-import { createMaterialTopTabNavigator } from "react-navigation";
-import LaunchScreen from "../Containers/LaunchScreen";
-import GraphScreen from "../Containers/GraphScreen";
-import PalomaCountScreen from "../Containers/PalomaCountScreen";
-import SecretScreen from "../Containers/SecretScreen";
-import styles from "./Styles/NavigationStyles";
-import { Metrics } from "../Themes";
+import { createStackNavigator } from "react-navigation";
+import TabbedNavigation from "./TabbedNavigation";
+import StackNavigation from "./StackNavigation";
+import { Colors, Metrics } from "../Themes";
 import { getStatusBarHeight } from "react-native-status-bar-height";
-import { Colors } from "../Themes";
 
 const STATUS_HEIGHT = getStatusBarHeight();
 
-const PrimaryNav = createMaterialTopTabNavigator(
+const PrimaryNav = createStackNavigator(
   {
-    LaunchScreen: { screen: LaunchScreen },
-    GraphScreen: { screen: GraphScreen },
-    PalomaCountScreen: { screen: PalomaCountScreen },
-    SecretScreen: { screen: SecretScreen }
-  },
-  {
-    // Default config for all screens
-    tabBarPosition: "top",
-    scrollEnabled: false,
-    animationEnabled: true,
-    swipeEnabled: false,
-    initialRouteName: "LaunchScreen",
-    tabBarOptions: {
-      showIcon: true,
-      showLabel: false,
-      indicatorStyle: {
-        backgroundColor: Colors.white
-      },
-      style: {
-        height: Metrics.navBarHeight + STATUS_HEIGHT,
-        justifyContent: "center",
-        paddingTop: STATUS_HEIGHT,
-        backgroundColor: Colors.bloodOrange
+    TabbedNavigation: {
+      screen: TabbedNavigation,
+      navigationOptions: {
+        header: null
+      }
+    },
+    StackNavigation: {
+      screen: StackNavigation,
+      navigationOptions: ({ navigation }) => {
+        console.log(navigation);
+        return {
+          headerTintColor: "#fff",
+          headerStyle: {
+            backgroundColor: Colors.bloodOrange,
+            height: Metrics.navBarHeight + STATUS_HEIGHT
+          }
+        };
       }
     }
+  },
+  {
+    headerMode: "screen",
+    initialRouteName: "TabbedNavigation"
   }
 );
 
